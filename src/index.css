@@ -1,11 +1,8 @@
 :root {
   font-family: Pacifico, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: #32303d;
+  font-weight: 400; 
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,14 +13,19 @@ body {
   margin: 0;
   display: flex;
   min-width: 375px;
-  min-height: 100vh;
-  background: url("/src/assets/bg.png");
+  min-height: 100dvh;
+  background: url("./assets/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  color: #32303d;
 }
 #root {
     display: flex;
     flex-direction: column;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
 }
 
 h1 {
@@ -43,6 +45,8 @@ p.subtitle {
     margin-bottom: 32px;
     height: 48px;
     border-radius: 8px;
+    background-color: #ebeaf5;
+    color: inherit;
 }
 .input-name:focus {
     border: none;
@@ -94,7 +98,7 @@ button {
 }
 .qr-code {
     border-radius: 8px;
-    border: 36px solid #787496;
+    border: 20px solid #787496;
     margin: 0 auto;
     max-width: 60%;
 }

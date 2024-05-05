@@ -1,5 +1,4 @@
 import { ChangeEvent, useState } from 'react'
-import './App.css'
 import mouse from './assets/mouse.png'
 import mouse2 from './assets/mouse-2.png'
 import qr_code from './assets/qr-code.jpg'
@@ -12,7 +11,7 @@ function App() {
     const [showResult, setShowResult] = useState(false)
     const [isNameConfirmed, setIsNameConfirmed] = useState(false)
     const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setName(e.currentTarget.value)
+        setName(e.currentTarget.value.trim())
     }
     const onNameConfirm = () => {
         const currentName = nameList.find(item => item.toLocaleLowerCase() === name.toLocaleLowerCase())
@@ -23,7 +22,7 @@ function App() {
             setError("Нужно ввести имя!")
         }
         else {
-            setError("Похоже вы не тот, кто нам нужен")
+            setError("Похоже, вы не тот, кто нам нужен")
         }
 
     }
@@ -54,7 +53,7 @@ function App() {
                             </div>
                         </>
                         : <>
-                            <p className='subtitle'>Покажите этот QR-код на ближайшем ПВЗ <span className='wb-text'>Wildberries</span></p>
+                            <p className='subtitle'>Покажите этот QR-код на ближайшем к вашему дому ПВЗ <span className='wb-text'>Wildberries</span></p>
                             <div className='qr-wrapper'>
                                 <img className='qr-code' src={qr_code} alt="qr-code" />
                                 <img className='qr-code-mouse' src={mouse2} alt="mouse2" />
