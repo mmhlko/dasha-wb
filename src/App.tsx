@@ -3,7 +3,7 @@ import mouse from './assets/mouse.png'
 import mouse2 from './assets/mouse-2.png'
 import qr_code from './assets/qr-code.jpg'
 
-const nameList = ['дарья', 'даша', 'дашунька', 'дашенька', 'дашулька']
+const nameList = ['дарья', 'даша', 'дашунька', 'дашенька', 'дашулька', 'дашуля', 'дашуня']
 
 function App() {
     const [name, setName] = useState('')
